@@ -1,0 +1,1 @@
+Apresentações feitas durante a estadia dos colaboradores da IBM.
