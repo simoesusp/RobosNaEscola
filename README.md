@@ -41,4 +41,4 @@ Tem como função arrecadar fundos por meio de patrocínios e gerenciar o dinhei
 ## Grupo de Marketing
 **Gerente: Guilherme H. R. Coelho** (guilhermehrc@usp.br)
 
-#timeMarketing Tem como função difundir as ideias do projeto utilizando redes sociais e anúncios. Fazendo parte desse grupo, você vai adquirir uma grande base no meio da comunicação, sendo essa a melhor forma de chegar ao cliente final, habilidade que será um diferencial no futuro.
+Tem como função difundir as ideias do projeto utilizando redes sociais e anúncios. Fazendo parte desse grupo, você vai adquirir uma grande base no meio da comunicação, sendo essa a melhor forma de chegar ao cliente final, habilidade que será um diferencial no futuro.
