@@ -24,7 +24,6 @@ Tem como função gerenciar os recursos humanos do projeto e garantir o bem esta
 Tem a função de prover e manter todos os robôs relacionados ao projeto, sendo então um dos grupos de vital importância para todo o projeto. Devido à necessidade dos robôs estarem prontos e sempre funcionando para que eles possam ser utilizados no projeto pelas crianças. Como projeto de longo prazo, planejamos desenvolver um robô que possa ser usado para ensinar robótica, à um baixo custo e de baixa complexidade, sendo esse escalável para podermos distribuí-lo por São Carlos e, eventualmente, outros municípios conforme o crescimento do projeto. Fazendo parte desse grupo, você terá contato com Arduino e eletrônica, ou seja, oportunidade de trabalhar com hardware e software, na correção de problemas e elaboração de novos sistemas.
 
 ## Grupo de Atividades
-**Gerente: Gabriel Toschi de Oliveira** (gabriel.toschi@hotmail.com)
 
 Tem como função fazer as atividades/exercícios/jogos que as crianças vão participar/jogar durante as aulas, para fixar os conteúdos, os que usam robôs e os que não usam. Fazendo parte desse grupo, você terá um maior contato com técnicas de pedagogia e game design, podendo assim, aprimorar suas habilidades de didática e de criar tarefas que despertem a curiosidade nas crianças.
 
