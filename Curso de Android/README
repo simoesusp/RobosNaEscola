@@ -1,0 +1,7 @@
+Para tirar o máximo de proveito do curso de Android para automatização residencial, você deverá levar:
+-Notebook com Android Studio instalado (Veja instruções de instalação em https://developer.android.com/studio/install.html?hl=pt-br)
+-Celular com Android
+-Cabo USB
+-Drivers do celular instalados (No caso do Windows, para isso crie um app "Hello World" e tente executar no seu celular, veja como em https://developer.android.com/training/basics/firstapp/index.html?hl=pt-br)
+
+Caso não tenha como levar um notebook, ou não tenha celular, ainda assim poderá colocar a mão na massa, mas vai perder tempo do curso fazendo os passos anteriores no lab.
