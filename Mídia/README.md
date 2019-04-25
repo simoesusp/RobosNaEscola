@@ -1,1 +1,0 @@
-Links de fotos e vídeos relacionados ao projeto.
