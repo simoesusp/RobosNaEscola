@@ -1,5 +1,34 @@
 ### Welcome to BlocklyDuino
 
+### Como fazer TUDO funcionar!!
+
+1) Crie um servidor WEB para abrir no Browser:
+
+Va' para pasta do Blocklysource (no meu caso)= ~/Documents/github/RobosNaEscola/BlockySource$
+python arduino_web_server.py --port=/dev/ttyUSB0 --command=/home/simoes/arduino-1.8.9/arduino --board=arduino:avr:nano
+
+--> Pra terminar click Ctrl+C
+
+2) Abra o link que o pyton criou no Browser
+Blocklyduino can now be accessed at http://127.0.0.1:8080/
+
+3) Crie ou Abra um projeto com LOAD XML na interface
+(no meu caso fica em) --> 
+/home/simoes/Documents/github/RobosNaEscola/SoftwareEscola/Blocky/
+
+4) Programe o Arduino:
+clique em upload e REZA pra o nome do arduino estar correto!!
+
+5) Tambem e' possivel salvar o programa em C para programar com a IDE do Arduino
+Clia em Sav Arduino Code
+--> Ele salva no Downloads
+--> Abra normalmente o .ino na IDE do Arduino e programe!
+
+
+
+### More Info on BlocklyDuino
+
+
 BlocklyDuino is a **web-based visual programming editor for [Arduino](http://www.arduino.cc/)**.
 
 BlocklyDuino is based on [Blockly](https://developers.google.com/blockly/), the web-based, graphical programming editor. Provide static type language blocks and code generators for Arduino programming.
