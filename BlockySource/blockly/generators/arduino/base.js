@@ -139,7 +139,7 @@ Blockly.Arduino.servo_read_degrees = function() {
   return code;
 };
 
-Blockly.Arduino.serial_print = function() {
+Blockly.Arduino.serial_println = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
   //content = content.replace('(','').replace(')','');
 

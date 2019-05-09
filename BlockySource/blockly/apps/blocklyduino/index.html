@@ -377,7 +377,7 @@ function init() {
         </value>
       </block>
       <block type="inout_analog_read"></block>
-      <block type="serial_print">
+      <block type="serial_println">
         <value name="CONTENT">
           <block type="text">
             <field name="TEXT"></field>
@@ -444,6 +444,15 @@ function init() {
     </category>
     <category name="Grove Motor">
       <block type="grove_motor_shield"></block>
+    </category>
+    <category name="Principia">
+      <block type="serial_print">
+        <value name="CONTENT">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
     </category>
   </xml>
 </body>

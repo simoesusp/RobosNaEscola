@@ -25,6 +25,70 @@ Clia em Sav Arduino Code
 --> Abra normalmente o .ino na IDE do Arduino e programe!
 
 
+### Como criar um novo Bloco
+
+Tem que editar 3 coisas!! E depois Re-build o python
+
+1) /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/apps/blocklyduino/index.html
+
+-> Crie uma nova categoria no final do arquivo (parte em XML):
+    <category name="Principia">
+            <block type="serial_println">
+        <value name="CONTENT">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </category>
+
+
+
+2) /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/blocks/base.js
+
+-> Adicione um bloco la':
+Blockly.Blocks['serial_println'] = {
+  helpUrl: 'http://www.arduino.cc/en/Serial/Print',
+  init: function() {
+    this.setColour(230);
+    this.appendValueInput("CONTENT", 'String')
+        .appendField("Serial Println");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Prints data to the console/serial port as human-readable ASCII text.');
+  }
+};
+
+3) /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/generators/arduino/base.js
+
+-> Descreva o sw que sera' adicionado com o novo bloco
+Blockly.Arduino.serial_print = function() {
+  var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
+  //content = content.replace('(','').replace(')','');
+
+  Blockly.Arduino.setups_['setup_serial_' + profile.default.serial] = 'Serial.begin(' + profile.default.serial + ');\n';
+
+  var code = 'Serial.print(' + content + ');\n';
+  return code;
+};
+    
+4) Re-build o python
+
+-> /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/python build.py
+
+==> No me caso bugou dizendo: 
+Error: Closure not found.  Read this:
+https://developers.google.com/blockly/hacking/closure
+
+Pra resolver: 
+sudo apt install npm
+npm install google-closure-library
+
+=====> Dai' ele instala como uma subpasta da pasta que voce estiver no terminal (troco porco!!!)
+=====> Entao, tem que mover para a pasta do:\~/Documents/github/RobosNaEscola/BlockySource/
+=====> E trocar o nome para closure-library   (tirando a parte google-)
+
+Dai' vai conseguir buildar!!!
 
 ### More Info on BlocklyDuino
 
