@@ -13,7 +13,7 @@ python arduino_web_server.py --port=/dev/ttyUSB0 --command=/home/simoes/arduino-
 Blocklyduino can now be accessed at http://127.0.0.1:8080/
 
 3) Crie ou Abra um projeto com LOAD XML na interface
-(no meu caso fica em) --> 
+(no meu caso fica em) -->
 /home/simoes/Documents/github/RobosNaEscola/SoftwareEscola/Blocky/
 
 4) Programe o Arduino:
@@ -29,39 +29,30 @@ Clia em Sav Arduino Code
 
 Tem que editar 3 coisas!! E depois Re-build o python
 
-1) /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/apps/blocklyduino/index.html
+1) Crie um novo arquivo em
+/home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/blocks
 
--> Crie uma nova categoria no final do arquivo (parte em XML):
-    <category name="Principia">
-            <block type="serial_println">
-        <value name="CONTENT">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-    </category>
+Ex: /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/blocks/principia.js
 
+goog.provide('Blockly.Blocks.Principia');
 
+goog.require('Blockly.Blocks');
 
-2) /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/blocks/base.js
-
--> Adicione um bloco la':
-Blockly.Blocks['serial_println'] = {
+Blockly.Blocks['serial_print'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
     this.setColour(230);
     this.appendValueInput("CONTENT", 'String')
-        .appendField("Serial Println");
+        .appendField("Serial Print");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Prints data to the console/serial port as human-readable ASCII text.');
   }
 };
 
-3) /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/generators/arduino/base.js
+2) Descreva o SW que será adicionado com o novo bloco em
+/home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/generators/arduino/principia.js
 
--> Descreva o sw que sera' adicionado com o novo bloco
 Blockly.Arduino.serial_print = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
   //content = content.replace('(','').replace(')','');
@@ -71,16 +62,30 @@ Blockly.Arduino.serial_print = function() {
   var code = 'Serial.print(' + content + ');\n';
   return code;
 };
-    
+
+3) Adicione uma nova seção em
+/home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/apps/blocklyduino/index.html
+
+-> Crie uma nova categoria no final do arquivo (parte em XML):
+    <category name="Principia">
+      <block type="serial_println">
+        <value name="CONTENT">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </category>
+
 4) Re-build o python
 
 -> /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/python build.py
 
-==> No me caso bugou dizendo: 
+==> No me caso bugou dizendo:
 Error: Closure not found.  Read this:
 https://developers.google.com/blockly/hacking/closure
 
-Pra resolver: 
+Pra resolver:
 sudo apt install npm
 npm install google-closure-library
 
@@ -89,6 +94,9 @@ npm install google-closure-library
 =====> E trocar o nome para closure-library   (tirando a parte google-)
 
 Dai' vai conseguir buildar!!!
+
+
+
 
 ### More Info on BlocklyDuino
 
