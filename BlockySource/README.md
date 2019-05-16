@@ -5,6 +5,7 @@
 1) Crie um servidor WEB para abrir no Browser:
 
 Va' para pasta do Blocklysource (no meu caso)= ~/Documents/github/RobosNaEscola/BlockySource$
+
 python arduino_web_server.py --port=/dev/ttyUSB0 --command=/home/simoes/arduino-1.8.9/arduino --board=arduino:avr:nano
 
 --> Pra terminar click Ctrl+C
