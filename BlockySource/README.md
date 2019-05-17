@@ -88,7 +88,9 @@ Blockly.Arduino.serial_print = function() {
 
 4) Re-build o python
 
--> /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/python build.py
+-> Va' para pasta: /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/
+
+-> Execute: python build.py
 
 ==> No me caso bugou dizendo:
 Error: Closure not found.  Read this:
