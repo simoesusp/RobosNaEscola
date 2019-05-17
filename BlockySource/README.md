@@ -31,10 +31,12 @@ Clia em Sav Arduino Code
 Tem que editar 3 coisas!! E depois Re-build o python
 
 1) Crie um novo arquivo em
+
 /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/blocks
 
 Ex: /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/blocks/principia.js
 
+```
 goog.provide('Blockly.Blocks.Principia');
 
 goog.require('Blockly.Blocks');
@@ -50,10 +52,13 @@ Blockly.Blocks['serial_print'] = {
     this.setTooltip('Prints data to the console/serial port as human-readable ASCII text.');
   }
 };
+```
 
 2) Descreva o SW que será adicionado com o novo bloco em
+
 /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/generators/arduino/principia.js
 
+```
 Blockly.Arduino.serial_print = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
   //content = content.replace('(','').replace(')','');
@@ -63,6 +68,7 @@ Blockly.Arduino.serial_print = function() {
   var code = 'Serial.print(' + content + ');\n';
   return code;
 };
+```
 
 3) Adicione uma nova seção em
 /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/apps/blocklyduino/index.html
