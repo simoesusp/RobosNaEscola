@@ -74,6 +74,7 @@ Blockly.Arduino.serial_print = function() {
 /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/apps/blocklyduino/index.html
 
 -> Crie uma nova categoria no final do arquivo (parte em XML):
+```
     <category name="Principia">
       <block type="serial_println">
         <value name="CONTENT">
@@ -83,6 +84,7 @@ Blockly.Arduino.serial_print = function() {
         </value>
       </block>
     </category>
+```
 
 4) Re-build o python
 
