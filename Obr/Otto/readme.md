@@ -1,1 +1,1 @@
-O Otto e' mane' !
+Aulas desenvolvidas para a Olimpíada Brasileira de Robótica, dadas aos estudantes da rede estadual da cidade de São Carlos. Espera-se ganhar experiência em lecionar, além de orientar os alunos nos conceitos básicos de robótica.
