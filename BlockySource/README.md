@@ -1,10 +1,13 @@
 ### Welcome to BlocklyDuino
 
-### Como fazer TUDO funcionar!!
+
+### Welcome to BlocklyDuino
+
+### Como fazer TUDO funcionar para Arduino Nano!!
 
 1) Crie um servidor WEB para abrir no Browser:
 
-Va' para pasta do Blocklysource (no meu caso)= ~/Documents/github/RobosNaEscola/BlockySource$
+Va' para pasta do Blocklysource (no meu caso)= \~/Documents/github/RobosNaEscola/BlockySource$
 
 python arduino_web_server.py --port=/dev/ttyUSB0 --command=/home/simoes/arduino-1.8.9/arduino --board=arduino:avr:nano
 
@@ -14,7 +17,7 @@ python arduino_web_server.py --port=/dev/ttyUSB0 --command=/home/simoes/arduino-
 Blocklyduino can now be accessed at http://127.0.0.1:8080/
 
 3) Crie ou Abra um projeto com LOAD XML na interface
-(no meu caso fica em) -->
+(no meu caso fica em) --> 
 /home/simoes/Documents/github/RobosNaEscola/SoftwareEscola/Blocky/
 
 4) Programe o Arduino:
@@ -24,6 +27,40 @@ clique em upload e REZA pra o nome do arduino estar correto!!
 Clia em Sav Arduino Code
 --> Ele salva no Downloads
 --> Abra normalmente o .ino na IDE do Arduino e programe!
+
+### Como fazer TUDO funcionar para Programar ESP32 via WIFI!!
+### Geito Facil !!
+
+1) Abra a interface do Arduino, conecte-se na rede WIFI que o ESP32 criou.
+
+2) Configure a Board como ESP32 Dev Module   e   Configure a porta como IP 192.168.4.1
+
+3) Programe o ESP32 via WIFI normalmente (obviamente com um programa que tenha WIFI e OTA)
+
+4) Salve oprograma e FECHE a IDE do Arduino
+  --> Ele vai atualizar um arquivo de Preferencias com o nome da board e a porta IP
+  --> No meu caso esta' em: /home/simoes/.arduino15/preferences.txt
+  --> Com esse aqurivo,ele se auto configura para o Blokly usar o ESP32 na WIFI
+
+5) Crie um servidor WEB para abrir no Browser:
+
+--> Va' para pasta do Blocklysource (no meu caso)= \~/Documents/github/RobosNaEscola/BlockySource$
+
+--> Digite: python arduino_web_server.py --port=192.168.4.1 --command=/home/simoes/arduino-1.8.9/arduino
+
+--> OBS.: Pra acabar com o Servidor, click Ctrl+C
+
+6) Abra o link que o pyton criou no Browser
+Blocklyduino can now be accessed at http://127.0.0.1:8080/
+
+7) Crie ou Abra um projeto com LOAD XML na interface
+(no meu caso fica em) --> 
+/home/simoes/Documents/github/RobosNaEscola/SoftwareEscola/Blocky/
+
+8) Programe o ESP32:
+clique em upload e REZA pra ele encontrar o ESP32 na WIFI como default
+
+
 
 
 ### Como criar um novo Bloco

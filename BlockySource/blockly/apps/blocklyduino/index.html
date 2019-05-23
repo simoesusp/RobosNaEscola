@@ -5,7 +5,7 @@
   <script type="text/javascript" src="../../blockly_compressed.js"></script>
   <script type="text/javascript" src="../../blocks_compressed.js"></script>
   <script type="text/javascript" src="../../arduino_compressed.js"></script>
-  <script type="text/javascript" src="../../msg/js/en.js"></script>
+  <script type="text/javascript" src="../../msg/js/pt-br.js"></script>
   <script type="text/javascript" src="Blob.js"></script>
   <script type="text/javascript" src="spin.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
@@ -377,13 +377,6 @@ function init() {
         </value>
       </block>
       <block type="inout_analog_read"></block>
-      <block type="serial_println">
-        <value name="CONTENT">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
       <block type="inout_tone">
         <value name="NUM">
           <block type="math_number">
@@ -447,6 +440,13 @@ function init() {
     </category>
     <category name="Principia">
       <block type="serial_print">
+        <value name="CONTENT">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+      <block type="serial_println">
         <value name="CONTENT">
           <block type="text">
             <field name="TEXT"></field>
