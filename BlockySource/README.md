@@ -1,7 +1,8 @@
-### Welcome to BlocklyDuino
+### Welcome to Blocky do Princípia Robos na Escola
 
+--> Este projeto e' um Fork de https://github.com/BlocklyDuino/BlocklyDuino
+--> No qual adicionamos a capacidade de programar o ESP32 via WIFI, além dos outros Arduinos (Nano, Uno...)
 
-### Welcome to BlocklyDuino
 
 ### Como fazer TUDO funcionar para Arduino Nano!!
 
@@ -63,9 +64,18 @@ clique em upload e REZA pra ele encontrar o ESP32 na WIFI como default
 
 
 
+### Como Mudar para o Português
+
+
+--> Para traduzir para Portugues, basta Editar o Index.HTML, que setá em:
+/home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/apps/blocklyduino
+--> E trocar a OITAVA LINHA de:    <script type="text/javascript" src="../../msg/js/en.js"></script>
+--> Para:   <script type="text/javascript" src="../../msg/js/pt-br.js"></script>
+  
+
 ### Como criar um novo Bloco
 
-Tem que editar 3 coisas!! E depois Re-build o python
+--> Para criar mais Blocos, tem que editar 3 coisas!! E depois Re-build o python
 
 1) Crie um novo arquivo em
 
