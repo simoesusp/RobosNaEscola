@@ -23,8 +23,11 @@ Updates Futuros (Espero que breve - Modificação e Adicões na próxima versão
 - Incluir de fato a abordagem sobre sensores.
 - Incluir mais exemplos comentados de aplicações com arduino.
 
-Desenvolvida por: Euzivam Sousa Silva Junior | Graduando em Engenharia Elétrica pela Universidade de Araraquara
-Revisão por: Danilo Augusto Rodrigues | Graduando em Engenharia Elétrica pela Universidade de Araraquara
+Desenvolvida por: Euzivam Sousa Silva Junior | Graduando em Engenharia Elétrica pela Universidade de Araraquara.
+Contato: euzivamjunior@hotmail.com
+
+Revisão por: Danilo Augusto Rodrigues | Graduando em Engenharia Elétrica pela Universidade de Araraquara.
+Contato: danilorodrigues1402@gmail.com
 
 Dúvidas, Críticas, Sugestões e Correções, email para:
 euzivamjunior@hotmail.com
