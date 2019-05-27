@@ -14,6 +14,7 @@ Revisado (Parte do conteúdo presente na apostila que passou por revisão):
 - Introdução a Circuitos Elétricos.
 
 Updates Futuros (Espero que breve - Modificação e Adicões na próxima versão):
+- Correção da disposição de figuras.
 - Adicionar as Referências Bibliográficas Utilizadas.
 - Finalizar a Revisão do conteúdo atual.
 - Adicionar capítulo dedicado a apresentação do projeto.
