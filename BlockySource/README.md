@@ -30,7 +30,31 @@ Clia em Sav Arduino Code
 --> Abra normalmente o .ino na IDE do Arduino e programe!
 
 ### Como fazer TUDO funcionar para Programar ESP32 via WIFI!!
-### Geito Facil !!
+### Geito Automatico !!
+
+1) Conecte-se na rede WIFI que o ESP32 criou.
+
+2) Crie um servidor WEB para abrir no Browser:
+
+--> Va' para pasta do Blocklysource (no meu caso)= \~/Documents/github/RobosNaEscola/BlockySource$
+
+--> Digite: python arduino_web_server.py --port=192.168.4.1 --command=/home/simoes/arduino-1.8.9/arduino --esp True
+
+--> OBS.: Pra acabar com o Servidor, click Ctrl+C
+
+3) Abra o link que o pyton criou no Browser
+Blocklyduino can now be accessed at http://127.0.0.1:8080/
+
+4) Crie ou Abra um projeto com LOAD XML na interface
+(no meu caso fica em) --> 
+/home/simoes/Documents/github/RobosNaEscola/SoftwareEscola/Blocky/
+
+5) Programe o ESP32:
+clique em upload e ele deve encontrar AUTOMATICAMENTE o ESP32 na WIFI
+
+
+### Como fazer TUDO funcionar para Programar ESP32 via WIFI!!
+### Geito Gambiarra !!
 
 1) Abra a interface do Arduino, conecte-se na rede WIFI que o ESP32 criou.
 

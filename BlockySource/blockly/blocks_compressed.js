@@ -2,6 +2,7 @@
 'use strict';
 
 Blockly.Blocks.Principia={};Blockly.Blocks.serial_print={helpUrl:"http://www.arduino.cc/en/Serial/Print",init:function(){this.setColour(230);this.appendValueInput("CONTENT","String").appendField("Serial Print");this.setPreviousStatement(!0,null);this.setNextStatement(!0,null);this.setTooltip("Prints data to the console/serial port as human-readable ASCII text.")}};
+Blockly.Blocks.ESP32_OTA_Server={init:function(){this.setColour(190);this.appendDummyInput().appendField("ESP32_OTA_Server");this.setPreviousStatement(!0,null);this.setNextStatement(!0,null);this.setTooltip("Cria todo o codigo para o ESP32 com OTA Server.")}};
 // Copyright 2012 Google Inc.  Apache License 2.0
 Blockly.Blocks.variables={};Blockly.Blocks.variables.HUE=330;
 Blockly.Blocks.variables_get={init:function(){this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);this.setColour(Blockly.Blocks.variables.HUE);this.appendDummyInput().appendField(new Blockly.FieldVariable(Blockly.Msg.VARIABLES_DEFAULT_NAME),"VAR");this.setOutput(!0);this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);this.contextMenuMsg_=Blockly.Msg.VARIABLES_GET_CREATE_SET},getVars:function(){return[this.getFieldValue("VAR")]},renameVar:function(a,b){Blockly.Names.equals(a,this.getFieldValue("VAR"))&&
