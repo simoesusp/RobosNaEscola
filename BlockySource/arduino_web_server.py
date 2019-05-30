@@ -76,7 +76,7 @@ parser = OptionParser()
 parser.add_option("--port", dest="port", help="Upload to serial port named PORT", metavar="PORT")
 parser.add_option("--board", dest="board", help="Board definition to use", metavar="BOARD")
 parser.add_option("--command", dest="cmd", help="Arduino command name", metavar="CMD")
-
+parser.add_option("--esp", dest="esp", help="Change the board to ESP32", metavar="ESP")
 
 class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def do_HEAD(self):
@@ -107,7 +107,7 @@ class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         length = int(self.headers.getheader('content-length'))
         if length:
             text = self.rfile.read(length)
-                        
+
             print "sketch to upload: " + text
 
             dirname = tempfile.mkdtemp()
@@ -117,7 +117,12 @@ class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             f.close()
 
             print "created sketch at %s" % (sketchname,)
-        
+
+            if options.esp == "True":
+                home_preferences = os.path.expandvars('$HOME/.arduino15/preferences.txt')
+                working_dir_preferences = os.path.expandvars('$PWD/preferences.txt')
+                subprocess.call(["cp", working_dir_preferences, home_preferences])
+
             # invoke arduino to build/upload
             compile_args = [
                 options.cmd or get_arduino_command(),
@@ -136,7 +141,7 @@ class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             rc = subprocess.call(compile_args)
 
             if not rc == 0:
-                print "arduino --upload returned " + `rc`                            
+                print "arduino --upload returned " + `rc`
                 self.send_response(400)
             else:
                 self.send_response(200)
