@@ -215,7 +215,7 @@ Blockly.Blocks['servo_read_degrees'] = {
 Blockly.Blocks['serial_println'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(230);
+    this.setColour(35);
     this.appendValueInput("CONTENT", 'String')
         .appendField("Serial Println");
     this.setPreviousStatement(true, null);
