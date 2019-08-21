@@ -39,3 +39,67 @@ Blockly.Blocks['Principia_delay_ESP'] = {
     this.setTooltip('Delay com OTA handle');
   }
 };
+
+Blockly.Blocks['TiraTampa_Frente'] = {
+  init: function() {
+    this.setColour(35);
+    this.appendValueInput("VELOCIDADE", 'Number')
+        .appendField("Tira Tampa Frente")
+        .setCheck('Number');
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Faz o Tira Tampa andar para frente.');
+  }
+};
+
+
+Blockly.Blocks['TiraTampa_Direita'] = {
+  init: function() {
+    this.setColour(35);
+    this.appendDummyInput()
+        .appendField("Tira Tampa Direita");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Vira o Tira Tampa virar para Direita.');
+  }
+};
+
+
+Blockly.Blocks['TiraTampa_Esquerda'] = {
+  init: function() {
+    this.setColour(35);
+    this.appendDummyInput()
+        .appendField("Tira Tampa Esquerda");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Vira o Tira Tampa virar para Esquerda.');
+  }
+};
+
+Blockly.Blocks['TiraTampa_Para'] = {
+  init: function() {
+    this.setColour(35);
+    this.appendDummyInput()
+        .appendField("Tira Tampa Para");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Para o Tira Tampa.');
+  }
+};
+
+//Gambiarra
+Blockly.Blocks['Fim'] = {
+  init: function() {
+    this.setColour(0);
+    this.appendDummyInput()
+        .appendField("Fim");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(false, null);
+    this.setTooltip('Encera a \'void loop\'.');
+  }
+};
