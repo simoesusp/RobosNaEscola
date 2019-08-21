@@ -453,7 +453,24 @@ function init() {
         </value>
       </block>
       <block type="ESP32_OTA_Server"></block>
-      <block type="Principia_delay_ESP"></block>
+      <block type="Principia_delay_ESP">
+        <value name="DELAY_TIME">
+          <block type="math_number">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
+			</block>
+      <block type="TiraTampa_Direita"></block>
+      <block type="TiraTampa_Esquerda"></block>
+      <block type="TiraTampa_Frente">
+        <value name="VELOCIDADE">
+          <block type="math_number">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+      </block>
+      <block type="TiraTampa_Para"></block>
+      <block type="Fim"></block>
     </category>
   </xml>
 </body>
